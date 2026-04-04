@@ -1,5 +1,11 @@
-1. Introduction
-2. Background
-3. Tools I used
-4. What I learned
-5. Conclusions
+# Introduction
+Dive into the data job market! Focussing on data analyst roles, this project explores top paying jobs, in-demand skills and where high demand meets high salary in data analytics.
+SQL Queries? Check them out here: (/)
+
+# Background
+
+# Tools I used
+
+# What I learned
+
+# Conclusions
