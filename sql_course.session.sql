@@ -1,4 +1,4 @@
-/*SELECT
+SELECT
     job_title AS Title,
     job_location AS Location,
     job_posted_date AT TIME ZONE 'UTC' AT TIME ZONE 'IST' AS Date_Time,
@@ -6,7 +6,7 @@
     EXTRACT (YEAR FROM job_posted_date) AS Date_Year
 FROM
 job_postings_fact
-LIMIT 10;*/
+LIMIT 10;
 
 
 /*SELECT
@@ -108,6 +108,12 @@ ORDER BY
 Display the top 5 skilss by their demand in remote jobs
 Include skill ID, name, & count of posts requiring the skill*/
 
+
+/* Find the count of the number of remote job postingsn per skill
+Display the top 5 skills by their demand in remote jobs
+Include skill_id, name, count of postings requiring the skill*/
+
+
 /*WITH remote_job_skills AS (
     SELECT
         skill_id, COUNT (*) AS Skill_Count
@@ -128,84 +134,3 @@ INNER JOIN skills_dim AS skills ON skills.skill_id = remote_job_skills.skill_id
 ORDER BY 
     Skill_Count DESC
 LIMIT 10;*/
-
---UNION
-/*SELECT 
-    job_title_short,
-    company_id,
-    job_location
-FROM
-    january_jobs
-
-UNION
-
-SELECT
-    job_title_short,
-    company_id,
-    job_location
-FROM
-    february_jobs
-
-UNION
-
-SELECT
-    job_title_short,
-    company_id,
-    job_location
-FROM
-    march_jobs*/
-
---UNION ALL
-
-/*SELECT 
-    job_title_short,
-    company_id,
-    job_location
-FROM
-    january_jobs
-
-UNION ALL
-
-SELECT
-    job_title_short,
-    company_id,
-    job_location
-FROM
-    february_jobs
-
-UNION ALL
-
-SELECT
-    job_title_short,
-    company_id,
-    job_location
-FROM
-    march_jobs*/
-
-
-/* Find job postings from the fisrt quarter that have a salary greater than $70K
-Combine job psotings tables from the first quarter of 2023 (Jan-Mar)
-Get job postings with an average yearly salary > $70,000*/
-
-/*SELECT 
-   job_title_short,
-    job_location,
-    job_via,
-    job_posted_date::DATE,
-    salary_year_avg
-FROM (
-    SELECT *
-        FROM january_jobs
-    UNION ALL
-    SELECT *
-        FROM february_jobs
-    UNION ALL
-    SELECT *
-        FROM march_jobs
-) AS Quarter_1_Job_Postings
-WHERE
-    salary_year_avg > 70000 AND
-    job_title_short = 'Data Analyst' AND
-    job_location = 'Chantilly, VA'
-ORDER BY
-    salary_year_avg DESC;*/
