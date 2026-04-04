@@ -1,6 +1,6 @@
 # Introduction
 Dive into the data job market! Focussing on data analyst roles, this project explores top paying jobs, in-demand skills and where high demand meets high salary in data analytics.
-SQL Queries? Check them out here: 
+SQL Queries? Check them out here: project_sql
 
 # Background
 
